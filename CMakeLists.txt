@@ -11,6 +11,9 @@ set(SOURCES
 # 実行ファイルを生成
 add_executable(get_func_name ${SOURCES})
 
+# コンパイルオプションを追加
+target_compile_options(get_func_name PRIVATE -O1)
+
 # リンクオプションを追加
 target_link_libraries(get_func_name dl)
 target_link_options(get_func_name PRIVATE -rdynamic)
